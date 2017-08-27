@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular App</title>
+    <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body ng-app="myApp">
+<!-- directive the tells the scope / code / tags that angular is going to take over -->
+  <div ng-controller="firstCtrl">
+
+    <input class="form-control"
+            ng-model="myName">
+
+    <button type="button"
+            name="button"
+            class="btn btn-danger"
+            ng-click="logChanges(myName)">Get Name</button>
+
+    <h1>{{myName}}</h1>
+
+    <ul>
+      <li ng-repeat="dog in nameArr">{{dog}}</li>
+    </ul>
+
+     <ul>
+      <li ng-repeat="name in objArr">{{name}}</li>
+    </ul>
+
+   <!--  <h1 ng-repeat="worker in objArr">{{worke}} work as a :
+    {{worker.name}}</h1> -->
+
+    <input type="" name="">
+
+  </div>
+
+ <form id="search-term">
+    Entry:
+    <br>
+    <input id="query" type="text">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="search-results">
+  </div>
+
+
+
+  <script src="app.js"></script>
+  <script src="app2.js"></script>
+  </body>
+</html>
