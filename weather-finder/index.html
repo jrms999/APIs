@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title> Weather Finder</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+function apiKey() {
+  return "93f3a303f36333c30313239333f343f3c3d393a3e303e3d3a343c373338303d".split("").filter(function(v, i) { return i%2 === 0; }).reverse().join("");
+  /* I know you can't really hide a key like this, I made it just for fun. You can get a free API key for your own use at https://openweathermap.org/api */
+}
+</script>
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container-fluid">
+  <div class="text-center">
+    <h2 id="title">What's the weather like?</h2>
+    <div class="transparent center-block">
+      <!-- 'span' elements have no default margin/padding, unlike 'p' -->
+      <span id="pos">Waiting for location...</span>
+      <img id="icon" class="center-block">
+      <p id="weather"></p>
+      <div> <!-- This div's only purpose is to keep temperature and button on the same line... -->
+        <span id="temp"></span>
+        <button id="btn-switch-unit" type="button" class="btn">°C</button>
+      </div>
+    </div><!-- /.transparent -->
+    <footer>Made by <a href="https://github.com/jrms999" target="_blank">JRMS999</a></footer>
+  </div><!-- /.text-center -->
+</div><!-- /.container -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
